@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>JMS zip</title>
+        <h:outputStylesheet library="css" name="default.css" />
+    </h:head>
+    <h:body>
+        JMS Zip<br/>
+        <h:form>
+            <h:commandButton value="Delete all" action="#{dataJMS.deleteAllZips()}" />
+            <h:dataTable value="#{dataJMS.dataZip}" var="p" 
+                             class="tablica" headerClass="zaglavlje"
+                             rowClasses="neparni,parni"
+                             style="width:200px;text-align: center;">
+            <h:column>
+                <f:facet name="header">Zip code</f:facet>
+                <h:outputText value="#{p.zip}"/>
+            </h:column> 
+            </h:dataTable>
+            <h:commandButton value="Delete message" action="#{dataJMS.deleteZip()}" >
+                <f:setPropertyActionListener target="#{dataJMS.selectedZip}" value="#{p}"/>
+            </h:commandButton>
+        </h:form>
+        <h:link value="View JMS messages" outcome="index" /><br/>
+    </h:body>
+</html>
+

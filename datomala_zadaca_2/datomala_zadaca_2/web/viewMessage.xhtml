@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Message view</title>
+    </h:head>
+    <h:body>
+        <h:panelGrid columns="2" border="1">
+            <h:column>
+                <h:outputText value="View all messages"/>
+            </h:column>
+            <h:column>
+                <h:form>
+                    <h:commandButton value="Back" action="#{viewMessage.backViewAllMessages()}"/>
+                </h:form>
+            </h:column>
+            <h:column>
+                <h:outputText value="ID"/>
+            </h:column>
+            <h:column>
+                <h:outputText value="#{viewMessage.message.id}"/>
+            </h:column>
+            <h:column>
+                <h:outputText value="Sender"/>
+            </h:column>
+            <h:column>
+                <h:outputText value="#{viewMessage.message.sender}"/>
+            </h:column>
+            <h:column>
+                <h:outputText value="Subject"/>
+            </h:column>
+            <h:column>
+                <h:outputText value="#{viewMessage.message.subject}"/>
+            </h:column>
+            <h:column>
+                <h:outputText value="Time"/>
+            </h:column>
+            <h:column>
+                <h:outputText value="#{viewMessage.message.time}"/>
+            </h:column>
+            <h:column>
+                <h:outputText value="Content"/>
+            </h:column>
+            <h:column>
+                <h:outputText value="#{viewMessage.message.content}"/>
+            </h:column>
+            <h:column>
+                <h:outputText value="Attachments"/>
+            </h:column>            
+            <h:column>
+                <h:outputText value="#{viewMessage.message.nrAttachments}"/>
+            </h:column>
+        </h:panelGrid>
+        <h:dataTable value="#{viewMessage.message.messageAttachments}" var="ma">
+            <h:column>  
+                <f:facet name="header">Type</f:facet>
+                <h:outputText value="#{ma.type}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Size</f:facet>
+                <h:outputText value="#{ma.size}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">File</f:facet>
+                <h:graphicImage value="pictures/#{ma.file}"/>
+            </h:column>
+        </h:dataTable>
+    </h:body>
+</html>
+

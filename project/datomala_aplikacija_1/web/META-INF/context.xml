@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/datomala_aplikacija_1">
+    <Resource name="jdbc/nwtis_datomala_bp_1" auth="Container" type="javax.sql.DataSource"
+              maxActive="100" maxIdle="30" maxWait="10000"
+              username="root" password="x0TEMP0x" driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/nwtis_datomala_bp_1"/>
+</Context>

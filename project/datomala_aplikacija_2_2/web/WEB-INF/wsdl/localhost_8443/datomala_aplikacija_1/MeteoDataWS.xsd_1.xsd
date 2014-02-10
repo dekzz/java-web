@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://ws.datomala.nwtis.foi.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.datomala.nwtis.foi.org/">
+
+<xs:element name="selectActiveZipCodes" type="tns:selectActiveZipCodes" />
+
+<xs:element name="selectActiveZipCodesResponse" type="tns:selectActiveZipCodesResponse" />
+
+<xs:element name="selectDataInTimeInterval" type="tns:selectDataInTimeInterval" />
+
+<xs:element name="selectDataInTimeIntervalResponse" type="tns:selectDataInTimeIntervalResponse" />
+
+<xs:element name="selectLatestDataForZipCode" type="tns:selectLatestDataForZipCode" />
+
+<xs:element name="selectLatestDataForZipCodeResponse" type="tns:selectLatestDataForZipCodeResponse" />
+
+<xs:element name="selectNLatestDataForZipCode" type="tns:selectNLatestDataForZipCode" />
+
+<xs:element name="selectNLatestDataForZipCodeResponse" type="tns:selectNLatestDataForZipCodeResponse" />
+
+<xs:element name="selectTopZipCodes" type="tns:selectTopZipCodes" />
+
+<xs:element name="selectTopZipCodesResponse" type="tns:selectTopZipCodesResponse" />
+
+<xs:complexType name="selectNLatestDataForZipCode">
+<xs:sequence>
+<xs:element name="zipcode" type="xs:string" minOccurs="0" />
+<xs:element name="n" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="selectNLatestDataForZipCodeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:meteoData" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="meteoData">
+<xs:sequence>
+<xs:element name="city" type="xs:string" minOccurs="0" />
+<xs:element name="cityadd" type="xs:string" minOccurs="0" />
+<xs:element name="dateadd" type="xs:string" minOccurs="0" />
+<xs:element name="humidity" type="xs:string" minOccurs="0" />
+<xs:element name="latitude" type="xs:string" minOccurs="0" />
+<xs:element name="latitudeadd" type="xs:string" minOccurs="0" />
+<xs:element name="longitude" type="xs:string" minOccurs="0" />
+<xs:element name="longitudeadd" type="xs:string" minOccurs="0" />
+<xs:element name="pressure" type="xs:string" minOccurs="0" />
+<xs:element name="temperature" type="xs:string" minOccurs="0" />
+<xs:element name="weather" type="xs:string" minOccurs="0" />
+<xs:element name="wind" type="xs:string" minOccurs="0" />
+<xs:element name="zipcode" type="xs:string" minOccurs="0" />
+<xs:element name="zipcodeadd" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="selectLatestDataForZipCode">
+<xs:sequence>
+<xs:element name="zipcode" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="selectLatestDataForZipCodeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:meteoData" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="selectTopZipCodes">
+<xs:sequence>
+<xs:element name="n" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="selectTopZipCodesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="selectDataInTimeInterval">
+<xs:sequence>
+<xs:element name="zipcode" type="xs:string" minOccurs="0" />
+<xs:element name="fromDate" type="xs:string" minOccurs="0" />
+<xs:element name="toDate" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="selectDataInTimeIntervalResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:meteoData" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="selectActiveZipCodes">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="selectActiveZipCodesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

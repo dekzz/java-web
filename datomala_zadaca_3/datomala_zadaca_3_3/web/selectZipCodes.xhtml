@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Meteo Data</title>
+        <h:outputStylesheet library="css" name="main.css" />
+    </h:head>
+    <h:body>
+        <h:outputText id="nrZipError" />
+        <h:form class="home">
+            <h:selectOneListbox value="#{zipCodeChooser.zipCodeAdd}" size="7">
+                <f:selectItems value="#{zipCodeChooser.zipCodes}" />
+            </h:selectOneListbox>
+            <h:selectOneListbox value="#{zipCodeChooser.zipCodeDelete}" size="7" >
+                <f:selectItems value="#{zipCodeChooser.choosenZipCodes}"/>
+            </h:selectOneListbox>
+            <br/>
+            <h:commandButton value="Add" action="#{zipCodeChooser.addZipCode()}" />
+            <h:commandButton value="Delete" action="#{zipCodeChooser.deleteZipCode()}" />
+            <br/>
+            <h:commandButton value="Show meteo data" action="#{zipCodeChooser.grabMeteoWSData()}" />
+            <h:commandButton value="Show REST meteo data" action="#{zipCodeChooser.grabMeteoRESTData()}"/>
+            <br/>
+            <h:message for="nrZipError" style="color: #ff3300"/>
+            <br/>
+            <h:outputText value="#{zipCodeChooser.meteoRESTData}" escape="false"/>
+            <br/>
+            <h:dataTable value="#{zipCodeChooser.meteoWSData}" var="m" rendered="#{zipCodeChooser.showData}"
+                         class="table" headerClass="header" rowClasses="odd,even">
+                <h:column>
+                    <f:facet name="header">City</f:facet>
+                    <h:outputText value="#{m.city}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Temp.</f:facet>
+                    <h:outputText value="#{m.temperature}°C"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Humidity</f:facet>
+                    <h:outputText value="#{m.humidity}%"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Latitude</f:facet>
+                    <h:outputText value="#{m.latitude}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Longitude</f:facet>
+                    <h:outputText value="#{m.longitude}"/>
+                </h:column>
+            </h:dataTable>
+        </h:form>
+    </h:body>
+</html>
+
+ 

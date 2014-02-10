@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Send Message</title>
+    </h:head>
+    <h:body>
+        <h1>Send Message</h1>
+        <h:outputText id="status" />
+        <h:message for="status" /> 
+        <h:form id="sendMessage">
+            
+            <h:outputLabel for="receiver" value="Receiver: "/>
+            <h:inputText id="receiver" value="#{sendMessage.receiver}">
+                <f:validateRegex pattern="^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"/>
+            </h:inputText>
+            <h:message for="receiver" style="color: #ff3300"/><br/>
+            
+            <h:outputLabel for="sender" value="Sender: "/>
+            <h:inputText id="sender" value="#{sendMessage.sender}">
+                <f:validateRegex pattern="^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"/>
+            </h:inputText>
+            <h:message for="sender" style="color: #ff3300"/><br/>
+            
+            <h:outputLabel for="subject" value="Subject: "/>
+            <h:inputText id="subject" value="#{sendMessage.subject}"/><br/>
+            
+            <h:outputLabel for="content" value="Content: "/>
+            <h:inputTextarea id="content" value="#{sendMessage.content}" rows="10" cols="60"/><br/>
+                
+            <!-- attachments -->
+            
+            <h:commandButton value="Send" action="#{sendMessage.sendMessage()}"/>
+        </h:form>
+        <h:link outcome="emailSettings" value="Email Settings"/>
+    </h:body>
+</html>
+

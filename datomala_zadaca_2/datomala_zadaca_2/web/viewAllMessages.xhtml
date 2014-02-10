@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    
+    <f:view locale="#{localization.selectedLocale}">
+    <h:head>
+        <title>All Messages</title>
+        <h:outputStylesheet library="css" name="osnovna.css" />
+    </h:head>
+    <h:body>
+        <h1>#{viewAllMessages.selectedDirectory}</h1>
+        <h:form>
+            <h:selectOneListbox value="#{viewAllMessages.selectedDirectory}" size="4">
+                <f:selectItems value="#{viewAllMessages.directories}" />
+            </h:selectOneListbox> <br/>
+            <h:commandButton value="Open" action="#{viewAllMessages.selectDirectory()}"/>
+            <h:commandButton value="Recycle" action="#{viewAllMessages.deleteAllMessages()}"/>
+            <h:dataTable binding="#{viewAllMessages.dataTable}" value="#{viewAllMessages.messages}" var="m" 
+                         first="0" rows="10"
+                         class="tablica" headerClass="zaglavlje" rowClasses="neparni,parni">
+                <h:column>
+                    <f:facet name="header">ID</f:facet>
+                    <h:outputText value="#{m.id}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Subject</f:facet>
+                    <h:outputText value="#{m.subject}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Sender</f:facet>
+                    <h:outputText value="#{m.sender}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Time</f:facet>
+                    <h:outputText value="#{m.time}">
+                        <f:convertDateTime pattern="dd.MM.yyyy HH:mm:ss" />
+                    </h:outputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Details</f:facet>
+                    <h:commandButton value="View" action="#{viewAllMessages.viewMessage}">
+                        <f:setPropertyActionListener target="#{viewAllMessages.messageID}" value="#{m.id}"/>
+                    </h:commandButton>
+                    <h:commandButton id="recycle" value="Delete" action="#{viewAllMessages.deleteMessage()}">
+                        <f:setPropertyActionListener target="#{viewAllMessages.messageID}" value="#{m.id}"/>
+                    </h:commandButton>
+                </h:column>
+                <f:facet name="footer">
+                    <h:panelGroup>
+                        <h:commandButton value="first" action="#{viewAllMessages.pageFirst()}"
+                            disabled="#{viewAllMessages.dataTable.first == 0}" />
+                        <h:commandButton value="prev" action="#{viewAllMessages.pagePrevious}"
+                            disabled="#{viewAllMessages.dataTable.first == 0}" />
+                        <h:commandButton value="next" action="#{viewAllMessages.pageNext()}"
+                            disabled="#{viewAllMessages.dataTable.first + viewAllMessages.dataTable.rows >= viewAllMessages.dataTable.rowCount}" />
+                        <h:commandButton value="last" action="#{viewAllMessages.pageLast()}"
+                            disabled="#{viewAllMessages.dataTable.first + viewAllMessages.dataTable.rows >= viewAllMessages.dataTable.rowCount}" />
+                    </h:panelGroup>
+                </f:facet>
+            </h:dataTable>
+        </h:form>
+        <h:link outcome="emailSettings" value="Email Settings"/>
+    </h:body>
+    <h:message for="recycle" style="color: #009900"/><br/>
+    </f:view>
+</html>
+

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>#{txt.login_title}</title>
+    </h:head>
+    <f:view locale="#{localization.selectedLocale}">
+        <h:body>
+            #{txt.login_title}
+            <h:form id="login">
+                <h:outputText value="#{txt.login_username}" /><br/>
+                <h:inputText  id ="username" value="#{login.username}" validator="#{login.checkEmpty}"/> 
+                <h:message for="username" style="color:red; font-weight: bold;" /><br/>
+                <h:outputText value="#{txt.login_parssword}" /><br/>
+                <h:inputText id="password"   value="#{login.password}" validator="#{login.checkEmpty}"/>
+                <h:message for="password" style="color:red; font-weight: bold;" /><br/>
+                <h:commandButton value="#{txt.login_login}" action="#{login.login()}"/>
+                <br/><br/>
+            </h:form>
+            <h:outputText value="#{txt.login_failed}" rendered="#{!login.successful}" style="color: red;"/>
+        </h:body>
+    </f:view>
+</html>
+

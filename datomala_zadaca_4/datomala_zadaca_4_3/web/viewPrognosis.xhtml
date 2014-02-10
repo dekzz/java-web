@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <body>
+
+        <ui:composition template="./template.xhtml">
+
+            <ui:define name="title">
+                Weather Prognosis
+            </ui:define>
+
+            <ui:define name="top">
+                NWTiS zadaca 4 - Weather Prognosis
+            </ui:define>
+
+            <ui:define name="content">
+                <h:form>
+                    <h:panelGrid columns="3" class="limitedSize">
+                        <h:panelGrid id="states" columns="2">
+                            <h:outputText value="States" class="bold"/>
+                            <h:outputText value=""/>
+
+                            <h:inputText value="#{selectCitiesZipCodes.filterStates}" class="limitedWidth">
+                                <f:ajax event="keyup" render="listStates" execute="listStates" immediate="true"/>
+                            </h:inputText>
+                            <h:outputText value=""/>
+
+                            <h:selectManyListbox id="listStates" value="#{selectCitiesZipCodes.listStatesSelected}" size="7" class="limitedSize">
+                                <f:selectItems value="#{selectCitiesZipCodes.listStates}"/>
+                            </h:selectManyListbox>                        
+                            <h:selectManyListbox id="selectedStates" value="#{selectCitiesZipCodes.selectedStatesSelected}" size="7">
+                                <f:selectItems value="#{selectCitiesZipCodes.selectedStates}"/>
+                            </h:selectManyListbox>
+
+                            <h:commandButton value="Add States" action="#{selectCitiesZipCodes.addStates()}">
+                                <f:ajax render="selectedStates" execute="listStates" immediate="true"/>
+                            </h:commandButton>
+                            <h:commandButton value="Delete States" action="#{selectCitiesZipCodes.deleteStates()}">
+                                <f:ajax render="selectedStates" execute="selectedStates" immediate="true"/>
+                            </h:commandButton>
+
+                            <h:outputText value=""/>
+                            <h:commandButton value="Load Cities" action="#{selectCitiesZipCodes.loadCities()}">
+                                <f:ajax render="listCities" execute="selectedStates" immediate="true"/>
+                            </h:commandButton>
+                        </h:panelGrid>
+
+                        <h:panelGrid id="cities" columns="2">
+                            <h:outputText value="Cities" class="bold"/>
+                            <h:outputText value=""/>
+
+                            <h:inputText value="#{selectCitiesZipCodes.filterCities}">
+                                <f:ajax event="keyup" render="listCities" execute="listCities" immediate="true"/>
+                            </h:inputText>
+                            <h:outputText value=""/>
+
+                            <h:selectManyListbox id="listCities" value="#{selectCitiesZipCodes.listCitiesSelected}" size="7">
+                                <f:selectItems value="#{selectCitiesZipCodes.listCities}"/>
+                            </h:selectManyListbox>                        
+                            <h:selectManyListbox id="selectedCities" value="#{selectCitiesZipCodes.selectedCitiesSelected}" size="7">
+                                <f:selectItems value="#{selectCitiesZipCodes.selectedCities}"/>
+                            </h:selectManyListbox>
+
+                            <h:commandButton value="Add Cities" action="#{selectCitiesZipCodes.addCities()}">
+                                <f:ajax render="selectedCities" execute="listCities" immediate="true"/>
+                            </h:commandButton>
+                            <h:commandButton value="Delete Cities" action="#{selectCitiesZipCodes.deleteCities()}">
+                                <f:ajax render="selectedCities" execute="selectedCities" immediate="true"/>
+                            </h:commandButton>
+
+                            <h:outputText value=""/>
+                            <h:commandButton value="Load ZIP codes" action="#{selectCitiesZipCodes.loadZipCodes()}">
+                                <f:ajax render="listZipCodes" execute="selectedCities" immediate="true"/>
+                            </h:commandButton>
+                        </h:panelGrid>
+
+                        <h:panelGrid id="zipCodes" columns="2">
+                            <h:outputText value="Zip Codes" class="bold"/>
+                            <h:outputText value=""/>
+
+                            <h:inputText value="#{selectCitiesZipCodes.filterZipCodes}" class="limitedWidth">
+                                <f:ajax event="keyup" render="listZipCodes" execute="listZipCodes" immediate="true"/>
+                            </h:inputText>
+                            <h:outputText value=""/>
+
+                            <h:selectManyListbox id="listZipCodes" value="#{selectCitiesZipCodes.listZipCodesSelected}" size="7">
+                                <f:selectItems value="#{selectCitiesZipCodes.listZipCodes}"/>
+                            </h:selectManyListbox>                        
+                            <h:selectManyListbox id="selectedZipCodes" value="#{selectCitiesZipCodes.selectedZipCodesSelected}" size="7">
+                                <f:selectItems value="#{selectCitiesZipCodes.selectedZipCodes}"/>
+                            </h:selectManyListbox>
+
+                            <h:commandButton value="Add Zip Codes" action="#{selectCitiesZipCodes.addZipCodes()}">
+                                <f:ajax render="selectedZipCodes" execute="listZipCodes" immediate="true"/>
+                            </h:commandButton>
+                            <h:commandButton value="Delete Zip Codes" action="#{selectCitiesZipCodes.deleteZipCodes()}">
+                                <f:ajax render="selectedZipCodes" execute="selectedZipCodes" immediate="true"/>
+                            </h:commandButton>
+
+                            <h:outputText value=""/>
+                            <h:commandButton value="Load Meteo Data" action="#{selectCitiesZipCodes.loadMeteoData()}">
+                                <f:ajax render="listMeteoData" execute="selectedZipCodes" immediate="true"/>
+                            </h:commandButton>
+                        </h:panelGrid>
+                    </h:panelGrid>
+                    <hr/>
+                    <h:dataTable id="listMeteoData" value="#{selectCitiesZipCodes.listMeteoData}" var="m"
+                                 class="table" headerClass="header" rowClasses="odd,even">
+                        <h:column>
+                            <f:facet name="header">Zip Code</f:facet>
+                            <h:outputText value="#{m.zipCode}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">City</f:facet>
+                            <h:outputText value="#{m.city}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Temp.</f:facet>
+                            <h:outputText value="#{m.temperature} °C"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Humidity</f:facet>
+                            <h:outputText value="#{m.humidity} %"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Pressure</f:facet>
+                            <h:outputText value="#{m.pressure} hPa"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Weather</f:facet>
+                            <h:outputText value="#{m.currDesc}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Latitude</f:facet>
+                            <h:outputText value="#{m.latitude}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Longitude</f:facet>
+                            <h:outputText value="#{m.longitude}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

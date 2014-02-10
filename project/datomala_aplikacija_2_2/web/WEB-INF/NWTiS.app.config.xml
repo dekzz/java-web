@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>NWTIS configuration</comment>
+    <entry key="socketIpAddress">localhost</entry>
+    <entry key="socketPort">8000</entry>
+    <entry key="emailServer">nwtis.foi.hr</entry>
+    <entry key="emailPort">143</entry>
+    <entry key="username">admin@nwtis.foi.hr</entry>
+    <entry key="password">654321</entry>
+    <entry key="emailSubject">NWTiS</entry>
+    <entry key="reportEmail">admin@nwtis.foi.hr</entry>
+    <entry key="reportSubject">Command execution report</entry>
+    <entry key="reportSaveDirectory">sent</entry>
+    <entry key="interval">30</entry>
+    <entry key="gallery">gallery</entry>
+    <entry key="nameValidDirectory">valid</entry>
+    <entry key="nameInvalidDirectory">invalid</entry>
+    <entry key="nameOtherDirectory">other</entry>
+    <entry key="mailsPerPage">10</entry>
+    <entry key="min_zips">3</entry>
+    <entry key="max_zips">10</entry>  
+</properties>

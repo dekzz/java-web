@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>#{txt.fresh_md_title}</title>
+        <h:outputStylesheet library="css" name="default.css" />
+    </h:head>
+    <f:view locale="#{localization.selectedLocale}">
+        <h:body>
+            #{txt.fresh_md_title}
+
+            <h:form>
+                <h:panelGrid columns="2" class="pg_main" >
+                    <h:selectManyListbox id="listCities" value="#{zipCodeData.cities}" size="7">
+                        <f:selectItems value="#{zipCodeData.listCities}" />
+                    </h:selectManyListbox>
+
+                    <h:selectManyListbox id="selectedCities" value="#{zipCodeData.citiesDelete}" size="7">
+                        <f:selectItems value="#{zipCodeData.listCitiesSelected}" />
+                    </h:selectManyListbox>
+
+                    <h:commandButton value="#{txt.fresh_md_addCity}" action="#{zipCodeData.addCity()}">
+                        <f:ajax render="selectedCities" execute="listCities" immediate="true" />
+                    </h:commandButton> 
+
+                    <h:commandButton value="#{txt.fresh_md_deleteCity}" action="#{zipCodeData.deleteCity()}" >
+                        <f:ajax render="selectedCities" execute="selectedCities" immediate="true" />
+                    </h:commandButton>
+
+                    <h:outputLabel value="" />
+
+                    <h:commandButton value="#{txt.ok}" action="#{zipCodeData.fetchMeteoData()}" >
+                        <f:ajax render="meteoData" execute="meteoData" immediate="true" />
+                    </h:commandButton>
+                </h:panelGrid>
+                <h:panelGrid columns="1" class="pg_data" >
+                    <h:dataTable id ="meteoData" value="#{zipCodeData.freshDataSelected}" var="p" 
+                                 class="tablica" headerClass="zaglavlje"
+                                 rowClasses="neparni,parni">
+                        <br/>
+                        <h:column>
+                            <f:facet name="header">#{txt.city}</f:facet>
+                            <h:outputText value="#{p.city}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">#{txt.zip_requested}</f:facet>
+                            <h:outputText value="#{p.zipcode}"/>
+                        </h:column> 
+                        <h:column>
+                            <f:facet name="header">#{txt.zip_returned}</f:facet>
+                            <h:outputText value="#{p.zipcodeadd}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">#{txt.geo_latitude}</f:facet>
+                            <h:outputText value="#{p.latitude}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">#{txt.geo_longitude}</f:facet>
+                            <h:outputText value="#{p.longitude}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">#{txt.temperature}</f:facet>
+                            <h:outputText value="#{p.temperature}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">#{txt.pressure}</f:facet>
+                            <h:outputText value="#{p.pressure}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">#{txt.wind}</f:facet>
+                            <h:outputText value="#{p.wind}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">#{txt.humidity}</f:facet>
+                            <h:outputText value="#{p.humidity}"/>
+                        </h:column>
+                        <f:facet name="footer">
+                            <h:panelGroup>
+                                <h:commandButton value="first" action="#{zipCodeData.pageFirst()}"
+                                                 disabled="#{zipCodeData.dataTable.first == 0}" />
+                                <h:commandButton value="prev" action="#{zipCodeData.pagePrevious}"
+                                                 disabled="#{zipCodeData.dataTable.first == 0}" />
+                                <h:commandButton value="next" action="#{zipCodeData.pageNext()}"
+                                                 disabled="#{zipCodeData.dataTable.first + zipCodeData.dataTable.rows >= zipCodeData.dataTable.rowCount}" />
+                                <h:commandButton value="last" action="#{zipCodeData.pageLast()}"
+                                                 disabled="#{zipCodeData.dataTable.first + zipCodeData.dataTable.rows >= zipCodeData.dataTable.rowCount}" />
+                            </h:panelGroup>
+                        </f:facet>
+                    </h:dataTable>
+
+                    <h:outputLabel value="" />
+                </h:panelGrid>
+                
+            </h:form>
+
+            <h:link value="#{txt.portal_title}" outcome="portal" />
+        </h:body>
+    </f:view>
+</html>
+

@@ -1,0 +1,28 @@
+.tablica {
+    border: 1px solid black;
+    background-color: black;
+    width: 95%;
+}
+.zaglavlje {
+    background-color: #111111;
+    color: white;
+    font-weight: bold;
+}
+.parni {
+    background-color: lightgray;    
+    text-indent: 5px;
+}
+.neparni {
+    background-color: darkgray;
+    text-indent: 5px;
+}
+.gumb {
+    background-color: gray;
+    color: black;
+    border: 1px solid darkgray;
+}
+.gumb:disabled {
+    background-color: darkgray;
+    color: black;
+    border: 1px solid black;
+}

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    
+    <f:view locale="#{localization.selectedLocale}">
+    <h:head>
+        <title>#{text.emailSettings_title}</title>
+    </h:head>
+    <h:body>
+        <h1>#{text.emailSettings_title}</h1>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel for="server" value="#{text.emailSettings_server}"/>
+                <h:inputText id="server" value="#{emailConnection.emailServer}">
+                    <f:validateLength minimum="4"/>
+                    <!-- <f:validateRegex pattern="^([0-9a-zA-Z]\.)+([a-zA-Z]{2,9})$"/> -->
+                </h:inputText><br/>
+                <h:message for="server" style="color: #ff3300"/>
+
+                <h:outputLabel for="username" value="#{text.emailSettings_username}"/>
+                <h:inputText id="username" value="#{emailConnection.username}">
+                    <f:validateRegex pattern="^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"/>
+                </h:inputText><br/>
+                <h:message for="username" style="color: #ff3300"/>
+
+                <h:outputLabel for="password" value="#{text.emailSettings_password}"/>
+                <h:inputSecret id="password" value="#{emailConnection.password}">
+                    <f:validateLength minimum="6" maximum="20"/>
+                    <!-- <f:validateRegex pattern="/^[a-zA-Z0-9]{6,}$/" /> -->
+                </h:inputSecret><br/>
+                <h:message for="password" style="color: #ff3300"/>
+
+                <h:commandButton value="Send Mail" action="#{emailConnection.sendMessage}"/>
+                <h:commandButton value="Read Mail" action="#{emailConnection.readMessages}"/>
+            </h:panelGrid>
+        </h:form>
+        <h:link outcome="selectLanguage" value="Select Language"/>
+    </h:body>
+    </f:view>
+</html>
+

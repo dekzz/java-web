@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="https://localhost:8443/datomala_aplikacija_1/MeteoDataWS?WSDL" uri="wsdl/localhost_8443/datomala_aplikacija_1/MeteoDataWS.wsdl"/>
+    <system systemId="https://localhost:8443/datomala_aplikacija_1/MeteoDataWS?xsd=1" uri="wsdl/localhost_8443/datomala_aplikacija_1/MeteoDataWS.xsd_1.xsd"/>
+    <system systemId="http://localhost:8084/datomala_aplikacija_1/MeteoDataWS?WSDL" uri="wsdl/localhost_8084/datomala_aplikacija_1/MeteoDataWS.wsdl"/>
+    <system systemId="http://localhost:8084/datomala_aplikacija_1/MeteoDataWS?xsd=1" uri="wsdl/localhost_8084/datomala_aplikacija_1/MeteoDataWS.xsd_1.xsd"/>
+</catalog>

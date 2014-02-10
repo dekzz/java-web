@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/datomala_zadaca_3_1/MeteoWS?wsdl" uri="xml-resources/web-service-references/MeteoWS/wsdl/localhost_8080/datomala_zadaca_3_1/MeteoWS.wsdl"/>
+    <system systemId="http://localhost:8080/datomala_zadaca_3_1/MeteoWS?xsd=1" uri="xml-resources/web-service-references/MeteoWS/wsdl/localhost_8080/datomala_zadaca_3_1/MeteoWS.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/datomala_zadaca_3_1/MeteoWS?xsd=2" uri="xml-resources/web-service-references/MeteoWS/wsdl/localhost_8080/datomala_zadaca_3_1/MeteoWS.xsd_2.xsd"/>
+    <system systemId="http://api.wxbug.net/weatherservice.asmx?WSDL" uri="xml-resources/web-service-references/weatherservice/wsdl/api.wxbug.net/weatherservice.asmx.wsdl"/>
+    <system systemId="http://localhost:8084/datomala_zadaca_3_1/MeteoWS?wsdl" uri="xml-resources/web-service-references/MeteoWS_1/wsdl/localhost_8084/datomala_zadaca_3_1/MeteoWS.wsdl"/>
+    <system systemId="http://localhost:8084/datomala_zadaca_3_1/MeteoWS?xsd=1" uri="xml-resources/web-service-references/MeteoWS_1/wsdl/localhost_8084/datomala_zadaca_3_1/MeteoWS.xsd_1.xsd"/>
+    <system systemId="http://localhost:8084/datomala_zadaca_3_1/MeteoWS?xsd=2" uri="xml-resources/web-service-references/MeteoWS_1/wsdl/localhost_8084/datomala_zadaca_3_1/MeteoWS.xsd_2.xsd"/>
+</catalog>

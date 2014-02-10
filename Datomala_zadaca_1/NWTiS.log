@@ -1,0 +1,350 @@
+May 07, 2013 4:06:13 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Could not open file: NWTiS.bin
+May 07, 2013 4:06:43 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:06:43 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:06:43 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 0 started!
+May 07, 2013 4:06:44 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala USER datomala; GETTIME;
+May 07, 2013 4:06:44 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:06:44 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:06:44 CEST 2013
+May 07, 2013 4:06:44 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 0 time: 07.05.2013 16:06:44 | Server time: OK Tue May 07 16:06:44 CEST 2013
+May 07, 2013 4:06:48 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 1 started!
+May 07, 2013 4:06:48 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala USER datomala; GETTIME;
+May 07, 2013 4:06:48 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:06:48 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:06:48 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:06:48 CEST 2013
+May 07, 2013 4:06:48 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 1 time: 07.05.2013 16:06:48 | Server time: OK Tue May 07 16:06:48 CEST 2013
+May 07, 2013 4:06:53 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 2 started!
+May 07, 2013 4:06:53 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala USER datomala; GETTIME;
+May 07, 2013 4:06:53 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:06:53 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:06:53 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:06:53 CEST 2013
+May 07, 2013 4:06:53 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 2 time: 07.05.2013 16:06:53 | Server time: OK Tue May 07 16:06:53 CEST 2013
+May 07, 2013 4:06:53 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:06:53 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:06:53 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:06:53 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:06:53 CEST 2013
+May 07, 2013 4:06:53 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 0 time: 07.05.2013 16:06:53 | Server time: OK Tue May 07 16:06:53 CEST 2013
+May 07, 2013 4:06:57 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 3 started!
+May 07, 2013 4:06:57 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:06:57 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala USER datomala; GETTIME;
+May 07, 2013 4:06:57 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:06:57 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:06:57 CEST 2013
+May 07, 2013 4:06:57 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 3 time: 07.05.2013 16:06:57 | Server time: OK Tue May 07 16:06:57 CEST 2013
+May 07, 2013 4:06:58 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:06:58 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:06:58 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:06:58 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:06:58 CEST 2013
+May 07, 2013 4:06:58 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 1 time: 07.05.2013 16:06:58 | Server time: OK Tue May 07 16:06:58 CEST 2013
+May 07, 2013 4:07:02 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 4 started!
+May 07, 2013 4:07:02 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:02 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala USER datomala; GETTIME;
+May 07, 2013 4:07:02 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:02 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:02 CEST 2013
+May 07, 2013 4:07:02 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 4 time: 07.05.2013 16:07:02 | Server time: OK Tue May 07 16:07:02 CEST 2013
+May 07, 2013 4:07:03 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:03 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:03 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:03 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:03 CEST 2013
+May 07, 2013 4:07:03 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 2 time: 07.05.2013 16:07:03 | Server time: OK Tue May 07 16:07:03 CEST 2013
+May 07, 2013 4:07:03 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:03 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:03 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:03 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:03 CEST 2013
+May 07, 2013 4:07:03 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 0 time: 07.05.2013 16:07:03 | Server time: OK Tue May 07 16:07:03 CEST 2013
+May 07, 2013 4:07:07 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala USER datomala; GETTIME;
+May 07, 2013 4:07:07 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:07 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:07 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:07 CEST 2013
+May 07, 2013 4:07:07 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 3 time: 07.05.2013 16:07:07 | Server time: OK Tue May 07 16:07:07 CEST 2013
+May 07, 2013 4:07:08 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:08 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:08 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:08 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:08 CEST 2013
+May 07, 2013 4:07:08 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 1 time: 07.05.2013 16:07:08 | Server time: OK Tue May 07 16:07:08 CEST 2013
+May 07, 2013 4:07:12 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala USER datomala; GETTIME;
+May 07, 2013 4:07:12 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:12 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:12 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:12 CEST 2013
+May 07, 2013 4:07:12 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 4 time: 07.05.2013 16:07:12 | Server time: OK Tue May 07 16:07:12 CEST 2013
+May 07, 2013 4:07:13 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala USER datomala; GETTIME;
+May 07, 2013 4:07:13 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:13 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:13 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:13 CEST 2013
+May 07, 2013 4:07:13 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 2 time: 07.05.2013 16:07:13 | Server time: OK Tue May 07 16:07:13 CEST 2013
+May 07, 2013 4:07:13 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:13 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:13 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:13 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:13 CEST 2013
+May 07, 2013 4:07:13 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 0 time: 07.05.2013 16:07:13 | Server time: OK Tue May 07 16:07:13 CEST 2013
+May 07, 2013 4:07:19 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:19 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:19 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:19 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:19 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:19 CEST 2013
+May 07, 2013 4:07:19 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:19 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 3 time: 07.05.2013 16:07:19 | Server time: OK Tue May 07 16:07:19 CEST 2013
+May 07, 2013 4:07:19 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:19 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:19 CEST 2013
+May 07, 2013 4:07:19 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 1 time: 07.05.2013 16:07:19 | Server time: OK Tue May 07 16:07:19 CEST 2013
+May 07, 2013 4:07:22 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:22 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:22 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:22 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:22 CEST 2013
+May 07, 2013 4:07:22 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 4 time: 07.05.2013 16:07:22 | Server time: OK Tue May 07 16:07:22 CEST 2013
+May 07, 2013 4:07:23 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:23 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:23 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:23 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:23 CEST 2013
+May 07, 2013 4:07:23 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 2 time: 07.05.2013 16:07:23 | Server time: OK Tue May 07 16:07:23 CEST 2013
+May 07, 2013 4:07:23 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:23 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:23 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:23 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:23 CEST 2013
+May 07, 2013 4:07:23 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 0 time: 07.05.2013 16:07:23 | Server time: OK Tue May 07 16:07:23 CEST 2013
+May 07, 2013 4:07:29 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala USER datomala; GETTIME;
+May 07, 2013 4:07:29 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala USER datomala; GETTIME;
+May 07, 2013 4:07:29 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:29 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:29 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:29 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:29 CEST 2013
+May 07, 2013 4:07:29 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:29 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:29 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:29 CEST 2013
+May 07, 2013 4:07:29 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 1 time: 07.05.2013 16:07:29 | Server time: OK Tue May 07 16:07:29 CEST 2013
+May 07, 2013 4:07:32 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:32 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:32 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:32 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:32 CEST 2013
+May 07, 2013 4:07:32 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 4 time: 07.05.2013 16:07:32 | Server time: OK Tue May 07 16:07:32 CEST 2013
+May 07, 2013 4:07:33 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:33 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:33 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:33 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:33 CEST 2013
+May 07, 2013 4:07:33 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 2 time: 07.05.2013 16:07:33 | Server time: OK Tue May 07 16:07:33 CEST 2013
+May 07, 2013 4:07:33 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:34 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:34 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:34 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:34 CEST 2013
+May 07, 2013 4:07:34 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 0 time: 07.05.2013 16:07:34 | Server time: OK Tue May 07 16:07:34 CEST 2013
+May 07, 2013 4:07:38 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala USER datomala; GETTIME;
+May 07, 2013 4:07:38 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:38 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:38 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:38 CEST 2013
+May 07, 2013 4:07:38 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 3 time: 07.05.2013 16:07:38 | Server time: OK Tue May 07 16:07:38 CEST 2013
+May 07, 2013 4:07:38 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:38 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:38 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:38 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:38 CEST 2013
+May 07, 2013 4:07:38 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 1 time: 07.05.2013 16:07:38 | Server time: OK Tue May 07 16:07:38 CEST 2013
+May 07, 2013 4:07:42 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:42 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:42 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:42 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:42 CEST 2013
+May 07, 2013 4:07:42 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 4 time: 07.05.2013 16:07:42 | Server time: OK Tue May 07 16:07:42 CEST 2013
+May 07, 2013 4:07:43 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:43 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:43 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:43 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:43 CEST 2013
+May 07, 2013 4:07:43 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 2 time: 07.05.2013 16:07:43 | Server time: OK Tue May 07 16:07:43 CEST 2013
+May 07, 2013 4:07:43 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:43 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:43 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:43 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:43 CEST 2013
+May 07, 2013 4:07:43 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 0 time: 07.05.2013 16:07:43 | Server time: OK Tue May 07 16:07:43 CEST 2013
+May 07, 2013 4:07:48 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:48 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:48 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:48 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:48 CEST 2013
+May 07, 2013 4:07:48 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 3 time: 07.05.2013 16:07:48 | Server time: OK Tue May 07 16:07:48 CEST 2013
+May 07, 2013 4:07:48 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:48 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:48 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: USER datomala; GETTIME;
+May 07, 2013 4:07:48 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Tue May 07 16:07:48 CEST 2013
+May 07, 2013 4:07:48 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 1 time: 07.05.2013 16:07:48 | Server time: OK Tue May 07 16:07:48 CEST 2013
+May 07, 2013 4:07:50 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client spotted!
+May 07, 2013 4:07:50 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Client thread started!
+May 07, 2013 4:07:50 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: admin ADMIN admin; PASSWD 123456; txt STOP;
+May 07, 2013 4:07:50 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server received: ADMIN admin; PASSWD 123456; txt STOP;
+May 07, 2013 4:07:50 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server answers: OK Stopping server
+May 07, 2013 4:07:50 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server interrupted!
+May 07, 2013 4:07:50 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: admin server responded: OK Stopping server
+May 07, 2013 4:07:51 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: server Record serialized!
+May 07, 2013 4:08:12 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 4 interrupted after 3 tries!
+May 07, 2013 4:08:13 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 2 interrupted after 3 tries!
+May 07, 2013 4:08:13 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 0 interrupted after 3 tries!
+May 07, 2013 4:08:17 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 3 interrupted after 3 tries!
+May 07, 2013 4:08:18 PM org.foi.nwtis.datomala.assignment_1.Log writeLog
+INFO: datomala Thread TCT 1 interrupted after 3 tries!

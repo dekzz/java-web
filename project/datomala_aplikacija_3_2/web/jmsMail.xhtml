@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>JMS mail</title>
+        <h:outputStylesheet library="css" name="default.css" />
+    </h:head>
+    <h:body>
+        JMS Email<br/>
+        <h:form>
+            <h:commandButton value="Delete all" action="#{dataJMS.deleteAllMails()}" />
+            <h:dataTable value="#{dataJMS.dataMail}" var="p" 
+                             class="tablica" headerClass="zaglavlje"
+                             rowClasses="neparni,parni"
+                             style="width:200px;text-align: center;">
+            <h:column>
+                <f:facet name="header">Start time</f:facet>
+                <h:outputText value="#{p.startTime}"/>
+            </h:column> 
+                <h:column>
+                <f:facet name="header">Stop time</f:facet>
+                <h:outputText value="#{p.stopTime}"/>
+            </h:column> 
+            <h:column>
+                <f:facet name="header">Number of NWTiS messages</f:facet>
+                <h:outputText value="#{p.nrNWTiSMessages}"/>
+            </h:column> 
+            <h:column>
+                <f:facet name="header">Number of read messages</f:facet>
+                <h:outputText value="#{p.nrAllMessages}"/>
+            </h:column> 
+            <h:column>
+                <h:commandButton value="Delete message" action="#{dataJMS.deleteMail()}" >
+                    <f:setPropertyActionListener target="#{dataJMS.selectedMail}" value="#{p}"/>
+                </h:commandButton>
+            </h:column>
+            </h:dataTable>
+        </h:form>
+        <h:link value="View JMS messages" outcome="index" /><br/>
+    </h:body>
+</html>
+

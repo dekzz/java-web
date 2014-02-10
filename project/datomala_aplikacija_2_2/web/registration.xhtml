@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>#{txt.registration_title}</title>
+    </h:head>
+    <f:view locale="#{localization.selectedLocale}">
+        <h:body>
+            #{txt.registration_title}
+            <h:form id="registration">
+                <h:outputText value="#{txt.registration_username}" /><br/>
+                <h:inputText  id ="username" value="#{registration.username}" validator="#{registration.checkEmpty}"/> 
+                <h:message for="username" style="color:red; font-weight: bold;" /><br/>
+                <h:outputText value="#{txt.registration_password}" /><br/>
+                <h:inputText id="password"   value="#{registration.password}" validator="#{registration.checkEmpty}"/>
+                <h:message for="password" style="color:red; font-weight: bold;" /><br/>
+                <h:commandButton value="#{txt.registration_register}" action="#{registration.registration()}"/>
+                <br/><br/>
+            </h:form>
+
+            <h:outputText value="#{txt.registration_failed}" rendered="#{!registration.valid}" style="color: red;"/>
+        </h:body>
+    </f:view>
+</html>
+

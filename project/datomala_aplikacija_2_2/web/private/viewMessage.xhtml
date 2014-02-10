@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>${txt.viewMessage_title}</title>
+        <h:outputStylesheet library="css" name="default.css" />
+    </h:head>
+    <f:view locale="#{localization.selectedLocale}">
+        <h:body>
+            <h1>${txt.viewMessage_title}</h1>
+                <h:panelGrid columns="2" border="1" class="tablica" headerClass="zaglavlje"
+                             rowClasses="neparni,parni">
+                    <h:column>
+                        <h:outputText value="#{txt.viewMessage_id}"/>
+                    </h:column>
+                    <h:column>
+                        <h:outputText value="#{viewMessage.message.id}"/>
+                    </h:column>
+                    <h:column>
+                        <h:outputText value="#{txt.viewMessage_sender}"/>
+                    </h:column>
+                    <h:column>
+                        <h:outputText value="#{viewMessage.message.sender}"/>
+                    </h:column>
+                    <h:column>
+                        <h:outputText value="#{txt.viewMessage_subject}"/>
+                    </h:column>
+                    <h:column>
+                        <h:outputText value="#{viewMessage.message.subject}"/>
+                    </h:column>
+                    <h:column>
+                        <h:outputText value="#{txt.viewMessage_text}"/>
+                    </h:column>
+                    <h:column>
+                        <h:outputText value="#{viewMessage.message.content}" escape="false"  />
+                    </h:column>
+                    <h:column rendered="#{viewMessage.multipart}">
+                        <h:outputText value="#{txt.viewMessage_attachments}"/>
+                    </h:column>            
+                    <h:dataTable value="#{viewMessage.message.messageAttachments}" var="p" border="1" 
+                                 rendered="#{viewMessage.multipart}">
+                        <h:column>
+                            <f:facet name="header">#{txt.viewMessage_attachmentsType}</f:facet>
+                            <h:outputText value="#{p.type}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">#{txt.viewMessage_attachmentsSize}</f:facet>
+                            <h:outputText value="#{p.size}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">#{txt.viewMessage_attachmentsFile}</f:facet>
+                            <h:outputText value="#{p.file}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGrid>
+            <h:form>
+                <h:commandButton value="#{txt.viewMessage_viewAllMessages}" 
+                                 action="#{viewMessage.backViewAllMessages()}"/>
+            </h:form>
+        </h:body>
+    </f:view>
+</html>
+

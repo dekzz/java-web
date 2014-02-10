@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>NWTIS datomala</comment>
+<entry key="password">123456</entry>
+<entry key="admin">admin</entry>
+<entry key="port">8000</entry>
+<entry key="records">NWTiS.bin</entry>
+<entry key="nrThreads">5</entry>
+<entry key="pause">10</entry>
+<entry key="interval">10</entry>
+<entry key="log">NWTiS.log</entry>
+<entry key="maxNrTry">3</entry>
+</properties>

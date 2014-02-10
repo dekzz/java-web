@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>#{txt.v_portfolio_title}</title>
+        <h:outputStylesheet library="css" name="default.css" />
+        <link href="./resources/css/default.css" rel="stylesheet" type="text/css" />
+        <link href="./resources/css/cssLayout.css" rel="stylesheet" type="text/css" />
+    </h:head>
+    <f:view locale="#{localization.selectedLocale}">
+        <h:body>
+            <h1> #{txt.v_portfolio_title}</h1>
+            <h:form>
+                #{txt.v_portfolio_filter}<br/>
+                #{txt.v_portfolio_d1}
+                <h:inputText value="#{portfolioView.date1}" class="filter" />
+                <br/>
+                #{txt.v_portfolio_d2}
+                <h:inputText value="#{portfolioView.date2}" class="filter" />
+                <br/>
+                <h:commandButton  value="#{txt.v_portfolio_get}" action="#{portfolioView.fetchFilteredData()}" />
+                <br/>
+            <h:panelGrid columns="1" class="pg_main" >
+                <h:dataTable id ="meteoData" value="#{portfolioView.meteoData}" var="p" 
+                             class="tablica" headerClass="zaglavlje"
+                                rowClasses="neparni,parni">
+                    <h:column>
+                        <f:facet name="header">#{txt.v_portfolio_zipRequested}</f:facet>
+                        <h:outputText value="#{p.zipcode}"/>
+                    </h:column>
+                      <h:column>
+                          <f:facet name="header">#{txt.v_portfolio_zipReturned}</f:facet>
+                          <h:outputText value="#{p.zipcodeadd}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{txt.v_portfolio_distance}</f:facet>
+                        <h:outputText value="#{p.distance}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{txt.v_portfolio_City}</f:facet>
+                        <h:outputText value="#{p.city}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{txt.v_portfolio_temperature}</f:facet>
+                        <h:outputText value="#{p.temperature}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{txt.v_portfolio_geoLatitude}</f:facet>
+                        <h:outputText value="#{p.latitude}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{txt.v_portfolio_geoLongitude}</f:facet>
+                        <h:outputText value="#{p.longitude}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{txt.v_portfolio_pressure}</f:facet>
+                        <h:outputText value="#{p.pressure}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{txt.v_portfolio_wind}</f:facet>
+                        <h:outputText value="#{p.wind}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{txt.v_portfolio_humidity}</f:facet>
+                        <h:outputText value="#{p.humidity}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{txt.v_portfolio_date}</f:facet>
+                        <h:outputText value="#{p.dateadd}">
+                            <f:convertDateTime pattern="dd.MM.yyyy hh:mm:ss"/>
+                        </h:outputText>
+                    </h:column>
+                    <f:facet name="footer">
+                            <h:panelGroup>
+                                <h:commandButton value="first" action="#{portfolioView.pageFirst()}"
+                                                 disabled="#{portfolioView.dataTable.first == 0}" />
+                                <h:commandButton value="prev" action="#{portfolioView.pagePrevious}"
+                                                 disabled="#{portfolioView.dataTable.first == 0}" />
+                                <h:commandButton value="next" action="#{portfolioView.pageNext()}"
+                                                 disabled="#{portfolioView.dataTable.first + portfolioView.dataTable.rows >= portfolioView.dataTable.rowCount}" />
+                                <h:commandButton value="last" action="#{portfolioView.pageLast()}"
+                                                 disabled="#{portfolioView.dataTable.first + portfolioView.dataTable.rows >= portfolioView.dataTable.rowCount}" />
+                            </h:panelGroup>
+                        </f:facet>
+                </h:dataTable>
+            </h:panelGrid>
+                
+            </h:form>
+            <h:link value="#{txt.portal_portfolio}" outcome="/private/portfolio" /><br/>
+        </h:body>
+    </f:view>
+</html>
+

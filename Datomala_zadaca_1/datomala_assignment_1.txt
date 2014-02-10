@@ -1,0 +1,11 @@
+#NWTIS configuration
+#Thu Mar 01 12:18:30 CET 2012
+port=8000
+records=NWTiS.bin
+admin=admin
+password=123456
+nrThreads=5
+pause=10
+interval=10
+log=NWTiS.log
+maxNrTry=3

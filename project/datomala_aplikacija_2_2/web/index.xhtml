@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>#{txt.index_title}</title>
+    </h:head>
+    <h:body>
+         <h:form>
+             <h:outputText value ="#{txt.index_chooseLanguage}"/>
+             <h:selectOneRadio value="#{localization.selectedLanguage}" required="true" requiredMessage="#{txt.index_selectLanguage}" >
+                 <f:selectItems value="#{localization.languages}"/>
+            </h:selectOneRadio>
+             <h:commandButton value="#{txt.index_confirmLanguage}" action="#{localization.selectLanguage()}"/>
+        </h:form>
+    </h:body>
+</html>
+

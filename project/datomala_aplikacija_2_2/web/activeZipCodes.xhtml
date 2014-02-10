@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>#{txt.activeZipCodes_title}</title>
+        <h:outputStylesheet library="css" name="default.css" />
+    </h:head>
+    <f:view locale="#{localization.selectedLocale}">
+        <h:body>
+            #{txt.activeZipCodes_title}
+
+            <h:dataTable value="#{zipCodeData.activeZipCodes}" var="p" 
+                                 class="tablica" headerClass="zaglavlje"
+                                 rowClasses="neparni,parni"
+                                 style="width:200px;text-align: center;">
+                <h:column>
+                    <f:facet name="header">#{txt.activeZipCodes_codes}</f:facet>
+                    <h:outputText value="#{p}"/>
+                </h:column> 
+
+            </h:dataTable>
+        </h:body>
+    </f:view>
+</html>
+

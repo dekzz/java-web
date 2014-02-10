@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>#{txt.portfolio_title}</title>
+        <h:outputStylesheet library="css" name="default.css" />
+    </h:head>
+    <f:view locale="#{localization.selectedLocale}">
+        <h:body>
+            #{txt.portfolio_title}
+            <br/><br/>
+            <h:link value="#{txt.portfolio_create}" outcome="/private/createPortfolio" /><br/>
+            <h:link value="#{txt.portfolio_requestLog}" outcome="/private/requestLog" /><br/>
+            <h:link value="#{txt.portfolio_viewMails}" outcome="/private/emailPanel" /><br/>
+            <h:link value="#{txt.error_portal}" outcome="/faces/portal" />
+            <br/><br/>
+            <h:form >
+                <h:dataTable value="#{portfolio.portfolioList}" var="p" 
+                             class="tablica" headerClass="zaglavlje"
+                             rowClasses="neparni,parni">
+                    <h:column>
+                        <f:facet name="header">#{txt.portfolio_id}</f:facet>
+                        <h:outputText value="#{p.id}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{txt.portfolio_owner}</f:facet>
+                        <h:outputText value="#{p.username.username}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{txt.portfolio_name}</f:facet>
+                        <h:outputText value="#{p.name}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{txt.portfolio_view}</f:facet>
+                        <h:commandButton value="#{txt.portfolio_view}" action="#{portfolio.portfoliosView()}">
+                            <f:setPropertyActionListener target="#{portfolioView.portfolioId}" value="#{p.id}"/>
+                        </h:commandButton>
+                    </h:column>
+                </h:dataTable>
+            </h:form>
+        </h:body>
+    </f:view>
+</html>
+

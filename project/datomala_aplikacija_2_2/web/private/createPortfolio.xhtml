@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>#{txt.c_portfolio_title}</title>
+        <h:outputStylesheet library="css" name="default.css" />
+    </h:head>
+    <f:view locale="#{localization.selectedLocale}">
+        <h:body>
+            #{txt.c_portfolio_title}
+            <h:form id="form">
+                #{txt.c_portfolio_name}<br/>
+                <h:inputText  id ="name" value="#{portfolioCreate.portfolioName}" validator="#{portfolioCreate.checkEmpty}"/>
+                <h:message for="name" style="color:red; font-weight: bold;" /><br/>
+
+                <h:panelGrid columns="3" class="pg_main" >
+
+                    <h:panelGrid id="state" columns="1"  columnClasses="cnas">
+
+                        <h:outputText value="#{txt.c_portfolio_state}" style="text-align: center;"/>
+
+                        <h:inputText  id ="filterState" value="#{portfolioCreate.filterStates}" class="filter">
+                            <f:ajax event="keyup" render="listStates" execute="listStates" immediate="true" />
+                        </h:inputText>
+
+                        <h:panelGrid id="statesList" columns="2" >
+
+                            <h:selectManyListbox id="listStates" value="#{portfolioCreate.listStatesSelected}" size="7">
+                                <f:selectItems value="#{portfolioCreate.listStates}" />
+                            </h:selectManyListbox>
+                            <h:selectManyListbox id="selectedStates" value="#{portfolioCreate.selectedStatesSelected}" size="7" >
+                                <f:selectItems value="#{portfolioCreate.selectedStates}" />
+                            </h:selectManyListbox>
+
+                            <h:commandButton value="#{txt.c_portfolio_addState}" action="#{portfolioCreate.addStates()}">
+                                <f:ajax render="selectedStates" execute="listStates" immediate="true" />
+                            </h:commandButton> 
+                            <h:commandButton value="#{txt.c_portfolio_removeStates}" action="#{portfolioCreate.deleteStates()}" >
+                                <f:ajax render="selectedStates" execute="selectedStates" immediate="true" />
+                            </h:commandButton>
+
+                            <h:outputText value="" />
+                            <h:commandButton value="#{txt.c_portfolio_getCities}" action="#{portfolioCreate.fetchCities()}" >
+                                <f:ajax render="listCities" execute="selectedStates" immediate="true" />
+                            </h:commandButton>
+
+                        </h:panelGrid>
+                    </h:panelGrid>
+
+                    <h:panelGrid id="city" columns="1" columnClasses="cnas" >
+                        <h:outputText value="#{txt.c_portfolio_cities}" />
+
+                        <h:inputText value="#{portfolioCreate.filterCities}" class="filter">
+                            <f:ajax event="keyup" render="listCities" execute="listCities" immediate="true" />
+                        </h:inputText>
+
+                        <h:panelGrid id="citiesList" columns="2" >
+                            <h:selectManyListbox id="listCities" style="width: fit-content;" value="#{portfolioCreate.listCitiesSelected}" size="7">
+                                <f:selectItems value="#{portfolioCreate.listCities}" />
+                            </h:selectManyListbox>
+
+                            <h:selectManyListbox id="selectedCities" value="#{portfolioCreate.selectedCitiesSelected}" size="7" >
+                                <f:selectItems value="#{portfolioCreate.selectedCities}" />
+                            </h:selectManyListbox>
+
+                            <h:commandButton value="#{txt.c_portfolio_addCities}" action="#{portfolioCreate.addCities()}">
+                                <f:ajax render="selectedCities" execute="listCities" immediate="true" />
+                            </h:commandButton> 
+
+                            <h:commandButton value="#{txt.c_portfolio_removeCities}" action="#{portfolioCreate.deleteCities()}" >
+                                <f:ajax render="selectedCities" execute="selectedCities" immediate="true" />
+                            </h:commandButton>
+
+                            <h:outputText value="" />
+                            <h:commandButton value="#{txt.c_portfolio_getZipCodes}" action="#{portfolioCreate.fetchZipCodes()}" >
+                                <f:ajax render="listZipCodes" execute="selectedCities" immediate="true" />
+                            </h:commandButton>
+
+                        </h:panelGrid>
+                    </h:panelGrid>
+
+                    <h:panelGrid id="zipCode" columns="1" columnClasses="cnas">
+                        <h:outputText value="#{txt.c_portfolio_zipCodes}" />
+
+                        <h:inputText value="#{portfolioCreate.filterZipCodes}" class="filter">
+                            <f:ajax event="keyup" render="listZipCodes" execute="listZipCodes" immediate="true" />
+                        </h:inputText>
+
+                        <h:panelGrid id="zipCodeList" columns="2" >
+
+                            <h:selectManyListbox id="listZipCodes" value="#{portfolioCreate.listZipCodesSelected}" size="7">
+                                <f:selectItems value="#{portfolioCreate.listZipCodes}" />
+                            </h:selectManyListbox>
+
+                            <h:selectManyListbox id="selectedZipCodes" value="#{portfolioCreate.selectedZipCodesSelected}" size="7" >
+                                <f:selectItems value="#{portfolioCreate.selectedZipCodes}" />
+                            </h:selectManyListbox>
+
+                            <h:commandButton value="#{txt.c_portfolio_addZip}" action="#{portfolioCreate.addZipCodes()}">
+                                <f:ajax render="selectedZipCodes" execute="listZipCodes" immediate="true" />
+                            </h:commandButton> 
+                            <h:commandButton value="#{txt.c_portfolio_removeZip}" action="#{portfolioCreate.deleteZipCodes()}" >
+                                <f:ajax render="selectedZipCodes" execute="selectedZipCodes" immediate="true" />
+                            </h:commandButton>
+
+                            <h:outputText value="" />
+                            <h:commandButton value="#{txt.c_portfolio_create}" action="#{portfolioCreate.savePortfolio()}" />
+
+                        </h:panelGrid>
+                    </h:panelGrid>
+                </h:panelGrid>
+            </h:form>
+            <h:link value="#{txt.portal_portfolio}" outcome="/private/portfolio" /><br/>
+        </h:body>
+    </f:view>
+</html>
+

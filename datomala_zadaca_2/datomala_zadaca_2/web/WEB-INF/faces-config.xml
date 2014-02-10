@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="2.1"
+              xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd">
+
+    <application>
+        <locale-config>
+            <default-locale>en</default-locale>
+            <supported-locale>en</supported-locale>
+            <supported-locale>de</supported-locale>
+            <supported-locale>hr</supported-locale>
+        </locale-config>
+        <resource-bundle>
+            <base-name>org.foi.nwtis.datomala.i18n</base-name>
+            <var>text</var>
+        </resource-bundle>
+    </application>
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{localization.selectLanguage}</from-action>
+            <from-outcome>OK</from-outcome>
+            <to-view-id>/emailSettings.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/emailSettings.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{emailConnection.readMessages}</from-action>
+            <from-outcome>OK</from-outcome>
+            <to-view-id>/viewAllMessages.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{emailConnection.sendMessage}</from-action>
+            <from-outcome>OK</from-outcome>
+            <to-view-id>/sendMessage.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>selectLanguage</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>emailSettings</from-outcome>
+            <to-view-id>/emailSettings.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>    
+    <navigation-rule>
+        <from-view-id>/viewAllMessages.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{viewAllMessages.viewMessage}</from-action>
+            <from-outcome>OK</from-outcome>
+            <to-view-id>/viewMessage.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>emailSettings</from-outcome>
+            <to-view-id>/emailSettings.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/viewMessage.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{viewMessage.backViewAllMessages()}</from-action>
+            <from-outcome>OK</from-outcome>
+            <to-view-id>/viewAllMessages.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://servers.ws.datomala.nwtis.foi.org/" xmlns:ns1="http://api.wxbug.net/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://servers.ws.datomala.nwtis.foi.org/">
+
+<xs:import namespace="http://api.wxbug.net/" schemaLocation="http://localhost:8084/datomala_zadaca_3_1/MeteoWS?xsd=2" />
+
+<xs:element name="getMeteoWSDataForManyZip" type="tns:getMeteoWSDataForManyZip" />
+
+<xs:element name="getMeteoWSDataForManyZipResponse" type="tns:getMeteoWSDataForManyZipResponse" />
+
+<xs:element name="getMeteoWSDataForZip" type="tns:getMeteoWSDataForZip" />
+
+<xs:element name="getMeteoWSDataForZipResponse" type="tns:getMeteoWSDataForZipResponse" />
+
+<xs:complexType name="getMeteoWSDataForZip">
+<xs:sequence>
+<xs:element name="zip" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMeteoWSDataForZipResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:LiveWeatherData" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMeteoWSDataForManyZip">
+<xs:sequence>
+<xs:element name="zips" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMeteoWSDataForManyZipResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:LiveWeatherData" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

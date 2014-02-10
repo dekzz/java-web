@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="2.1"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd">
+
+    <application>
+        <locale-config>
+            <supported-locale>en</supported-locale>
+            <supported-locale>hr</supported-locale>
+        </locale-config>
+        <resource-bundle>
+            <base-name>org.foi.nwtis.datomala.i18n</base-name>
+            <var>txt</var>
+        </resource-bundle>
+    </application>
+    
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{localization.selectLanguage()}</from-action>
+            <from-outcome>OK</from-outcome>
+            <to-view-id>/portal.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{localization.selectLanguage()}</from-action>
+            <from-outcome>NOT OK</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/login.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{login.login()}</from-action>
+            <from-outcome>OK</from-outcome>
+            <to-view-id>/private/portfolio.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{login.login()}</from-action>
+            <from-outcome>NOT OK</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/registration.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{registration.registration()}</from-action>
+            <from-outcome>OK</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{registration.registration()}</from-action>
+            <from-outcome>NOT OK</from-outcome>
+            <to-view-id>/registration.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/private/createPortfolio.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{portfolioCreate.savePortfolio()}</from-action>
+            <from-outcome>OK</from-outcome>
+            <to-view-id>/private/portfolio.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{portfolioCreate.savePortfolio()}</from-action>
+            <from-outcome>NOT OK</from-outcome>
+            <to-view-id>/private/createPortfolio.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/private/portfolio.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{portfolio.portfoliosView()}</from-action>
+            <from-outcome>OK</from-outcome>
+            <to-view-id>/private/viewPortfolio.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{portfolio.portfoliosView()}</from-action>
+            <from-outcome>NOT OK</from-outcome>
+            <to-view-id>/private/portfolio.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/private/emailPanel.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{viewAllMessages.viewmessage}</from-action>
+            <from-outcome>OK</from-outcome>
+            <to-view-id>/private/viewMessages.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{viewAllMessages.viewmessage}</from-action>
+            <from-outcome>NOT OK</from-outcome>
+            <to-view-id>/private/emailPanel.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{viewAllMessages.viewmessage}</from-action>
+            <from-outcome>ERROR</from-outcome>
+            <to-view-id>/private/emailPanel.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/private/viewMessage.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{viewMessage.backViewAllMessages}</from-action>
+            <from-outcome>OK</from-outcome>
+            <to-view-id>/private/emailPanel.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+</faces-config>

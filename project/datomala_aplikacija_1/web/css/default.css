@@ -1,0 +1,161 @@
+body {
+    background-color: #eeeeee;
+    padding-top: 3%; 
+    font-size: 12px;
+    font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    color: #000000;  
+    margin: 10px;
+}
+
+#top {
+    position:fixed;
+    width:100%;
+    height: 3%;
+    background-color: #000000;
+    color: white;
+    font-size: 18px;
+    top: 0;
+    left: 0;
+    padding:5px;
+    z-index:1000;
+}
+
+#bottom {
+    position:fixed;
+    width:100%;
+    background-color: #000000;
+    color: white;
+    bottom:0;
+    left: 0;
+    height:15px;
+    padding:5px;
+    z-index:1000;
+}
+
+#left {
+    position: fixed;
+    top: 4.5%;
+    left: 0;
+    background-color: #cccccc;
+    padding: 5px;
+    width: 140px;
+    border: 2px solid;
+    -moz-border-radius-bottomright: 50px 25px;
+    border-bottom-right-radius: 50px 25px;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+#right {
+    float: right;
+    background-color: #ece3a5;
+    padding: 5px;
+    width: 150px;
+}
+
+#content {
+    background-color: #cccccc;
+    border: 2px solid;
+    padding: 5px;
+    -moz-border-radius: 25px 10px / 10px 25px;
+    border-radius: 25px 10px / 10px 25px;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.center_content {
+    position: relative;
+    background-color: #cccccc;
+    padding: 5px;
+    text-align: center;
+}
+
+.left_content {
+    background-color: #cccccc;
+    padding: 5px;
+    margin-left: 170px;
+}
+
+.right_content {
+    background-color: #cccccc;
+    padding: 5px;
+    margin: 0px 170px 0px 170px;
+}
+
+a:link, a:visited {
+    color: #333333;
+    font-weight : bold;
+    text-decoration: none;
+}
+
+a:link:hover, a:visited:hover  {
+    color: black;
+    font-weight : bold;
+    text-decoration: underline overline;
+}
+
+.limitedSize {
+    display: block;
+    overflow: auto;
+}
+
+.limitedWidth {
+    max-width: 50px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.table {
+    border: 1px solid black;
+    background-color: black;
+    color: #cccccc;
+    box-shadow: 10px 5px 5px #888888;
+}
+
+.tableRow {
+    color: black;
+}
+
+.table a:link, a:visited {
+    color: #dddddd;
+    text-decoration: none;
+}
+
+.table a:link:hover, a:visited:hover  {
+    color: white;
+    font-weight : bold;
+    text-decoration: underline overline;
+}
+.header {
+    background-color: #111111;
+    color: white;
+    font-weight: bold;
+}
+.even {
+    background-color: lightgray;    
+    text-indent: 5px;
+}
+.odd {
+    background-color: darkgray;
+    text-indent: 5px;
+}
+.button {
+    background-color: gray;
+    color: black;
+    border: 1px solid darkgray;
+}
+.button:disabled {
+    background-color: darkgray;
+    color: black;
+    border: 1px solid black;
+}
+
+h1 {
+    font-family: Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    border-bottom: 1px solid #AFAFAF; 
+    font-size:  16pt;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    color: #D20005;
+}

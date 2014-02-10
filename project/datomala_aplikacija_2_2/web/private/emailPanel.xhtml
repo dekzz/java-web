@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>#{txt.viewAllMessages_title}</title>
+        <h:outputStylesheet library="css" name="default.css" />
+    </h:head>
+    <f:view locale="#{localization.selectedLocale}">
+        <h:body>
+            <h:form>
+                <h:selectOneListbox value="#{viewAllMessages.selectedDirectory}">
+                    <f:selectItems value="#{viewAllMessages.directories}" />
+                </h:selectOneListbox><br/>
+                <h:commandButton value="#{txt.viewAllMessages_chooseFolder}" action="#{viewAllMessages.selectDirectory()}" />
+            </h:form> <br/>
+            <h:outputText value="#{txt.viewAllMessages_currentFolder} - #{viewAllMessages.selectedDirectory}" /><br/>
+            <h:outputText style="color: red;" value="#{txt.viewAllMessages_emptyFolder}" 
+                          rendered="#{viewAllMessages.emptyMap}" /> <br/>
+            <h:form rendered="#{!viewAllMessages.emptyMap}">
+                <h:dataTable value="#{viewAllMessages.messages}" var="p" 
+                             class="tablica" headerClass="zaglavlje"
+                             rowClasses="neparni,parni">
+                    <h:column>
+                        <f:facet name="header">#{txt.viewAllMessages_idMessage}</f:facet>
+                        <h:outputText value="#{p.id}"/>
+                    </h:column> 
+                    <h:column>
+                        <f:facet name="header">#{txt.viewAllMessages_sender}</f:facet>
+                        <h:outputText value="#{p.sender}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{txt.viewAllMessages_subject}</f:facet>
+                        <h:outputText value="#{p.subject}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{txt.viewAllMessages_time}</f:facet>
+                        <h:outputText value="#{p.time}">
+                            <f:convertDateTime pattern="dd.MM.yyyy hh:mm:ss"/>
+                        </h:outputText>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{txt.viewAllMessages_view}</f:facet>
+                        <h:commandButton value="#{txt.viewAllMessages_viewMessage}" action="#{viewAllMessages.viewMessage()}">
+                            <f:setPropertyActionListener target="#{viewAllMessages.messageID}" value="#{p.id}"/>
+                        </h:commandButton>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{txt.viewAllMessages_delete}</f:facet>
+                        <h:commandButton value="#{txt.viewAllMessages_}" action="#{viewAllMessages.deleteMessage()}">
+                            <f:setPropertyActionListener target="#{viewAllMessages.messageID}" value="#{p.id}"/>
+                        </h:commandButton>
+                    </h:column>
+                    <f:facet name="footer">
+                            <h:panelGroup>
+                                <h:commandButton value="first" action="#{viewAllMessages.pageFirst()}"
+                                                 disabled="#{viewAllMessages.dataTable.first == 0}" />
+                                <h:commandButton value="prev" action="#{viewAllMessages.pagePrevious}"
+                                                 disabled="#{viewAllMessages.dataTable.first == 0}" />
+                                <h:commandButton value="next" action="#{viewAllMessages.pageNext()}"
+                                                 disabled="#{viewAllMessages.dataTable.first + viewAllMessages.dataTable.rows >= viewAllMessages.dataTable.rowCount}" />
+                                <h:commandButton value="last" action="#{viewAllMessages.pageLast()}"
+                                                 disabled="#{viewAllMessages.dataTable.first + viewAllMessages.dataTable.rows >= viewAllMessages.dataTable.rowCount}" />
+                            </h:panelGroup>
+                        </f:facet>
+                </h:dataTable>
+            </h:form>
+            <br/>
+            <h:link value="#{txt.viewAllMessages_back}" outcome="/private/portfolio" />
+        </h:body>
+    </f:view>
+</html>
+
